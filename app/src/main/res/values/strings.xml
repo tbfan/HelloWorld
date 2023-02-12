@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Fragments</string>
+    <string name="increment">increment</string>
+    <string name="count_phrase">Fragment %d count is %d</string>
+    <string name="count_phrase2">Fragment %d count is %d</string>
+
+    <string name="count_hint1">Fragment %s: Count = %d</string>
+    <string name="count_hint2">Fragment %s: Count = %d</string>
+
+</resources>

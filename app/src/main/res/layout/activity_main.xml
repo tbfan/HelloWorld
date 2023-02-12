@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/count_phrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="@string/count_phrase"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/count_phrase2"
+        app:layout_constraintStart_toStartOf="@+id/topFragmentContainerView"
+        app:layout_constraintTop_toBottomOf="@+id/botFragmentContainerView" />
+
+    <TextView
+        android:id="@+id/count_phrase2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/count_phrase"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/topFragmentContainerView"
+        app:layout_constraintTop_toBottomOf="@+id/count_phrase" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/topFragmentContainerView"
+        android:layout_width="731dp"
+        android:layout_height="195dp"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/count_phrase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth="match_parent"
+
+        tools:layout="@layout/fragment_count" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/botFragmentContainerView"
+        android:layout_width="731dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="145dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topFragmentContainerView"
+        app:layout_constraintWidth="match_parent"
+
+        tools:layout="@layout/fragment_count" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
